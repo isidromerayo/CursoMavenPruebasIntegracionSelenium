@@ -16,8 +16,9 @@ public class AnalisisEstatico {
 	/**
 	 * "Calendars" and "DateFormats" should not be static
 	 */
-	 static private SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");  // Noncompliant
-	 static private Calendar calendar = Calendar.getInstance();  // Noncompliant
+	private SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");
+	private Calendar calendar = Calendar.getInstance();
+
 	/**
 	 * ".equals()" should not be used to test the values of "Atomic" classes
 	 */
@@ -25,8 +26,9 @@ public class AnalisisEstatico {
 		AtomicInteger aInt1 = new AtomicInteger(0);
 		AtomicInteger aInt2 = new AtomicInteger(0);
 
-		if (aInt1.equals(aInt2)) {
-			
+		if (aInt1.get() == aInt2.get()) {
+
 		}
 	}
+	
 }
