@@ -112,6 +112,7 @@ Aliqua, ullamco saepe ea magna magna ut et incididunt ut. Consectetur tunante no
 				<version>2.7.1</version>
 				<configuration>
 				    <argLine>${surefireArgLine}</argLine>
+				    <!-- TODO: revisar para que se incluyan directorios -->
 					<excludes>
 						<exclude>**/integracion/*.java</exclude>
 					</excludes>
