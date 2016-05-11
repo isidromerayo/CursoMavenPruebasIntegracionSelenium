@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class TestLocalhostHTML {
+public class LocalhostHTMLTest {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -25,7 +25,8 @@ public class TestLocalhostHTML {
   @Test
   public void testGoogleYGitHub() throws Exception {
     driver.get(baseUrl + "/PruebasIntegracionSelenium/index.html");
-    driver.findElement(By.id("titulo"));
+    String resultadoObtenido = driver.findElement(By.id("titulo")).getText();
+    Assert.assertEquals("Esta es la pagina de inicio", resultadoObtenido);
 
   }
 

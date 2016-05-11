@@ -23,6 +23,14 @@ Aliqua, ullamco saepe ea magna magna ut et incididunt ut. Consectetur tunante no
 	
 	</description>
 
+	<scm>
+		<developerConnection>scm:git:https://github.com/isidromerayo/CursoMavenPruebasIntegracionSelenium</developerConnection>
+		<!-- <connection>scm:git:file://localhost/</connection> -->
+		<connection>scm:git:https://github.com/isidromerayo/CursoMavenPruebasIntegracionSelenium</connection>
+		<url>https://github.com/isidromerayo/CursoMavenPruebasIntegracionSelenium</url>
+		<tag>HEAD</tag>
+	</scm>
+
 	<reporting>
 		<plugins>
 			<plugin>
@@ -137,36 +145,6 @@ Aliqua, ullamco saepe ea magna magna ut et incididunt ut. Consectetur tunante no
 					</execution>
 				</executions>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.mortbay.jetty</groupId> -->
-			<!-- <artifactId>maven-jetty-plugin</artifactId> -->
-			<!-- <version>6.1.10</version> -->
-			<!-- <configuration> -->
-			<!-- <scanIntervalSeconds>10</scanIntervalSeconds> -->
-			<!-- <stopKey>foo</stopKey> -->
-			<!-- <stopPort>9999</stopPort> -->
-			<!-- </configuration> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <id>start-jetty</id> -->
-			<!-- <phase>pre-integration-test</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>run</goal> -->
-			<!-- </goals> -->
-			<!-- <configuration> -->
-			<!-- <scanIntervalSeconds>0</scanIntervalSeconds> -->
-			<!-- <daemon>true</daemon> -->
-			<!-- </configuration> -->
-			<!-- </execution> -->
-			<!-- <execution> -->
-			<!-- <id>stop-jetty</id> -->
-			<!-- <phase>post-integration-test</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>stop</goal> -->
-			<!-- </goals> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- </plugin> -->
 			<plugin>
 				<groupId>org.codehaus.cargo</groupId>
 				<artifactId>cargo-maven2-plugin</artifactId>
@@ -213,6 +191,17 @@ Aliqua, ullamco saepe ea magna magna ut et incididunt ut. Consectetur tunante no
 					</execution>
 				</executions>
 			</plugin>
+			<!--  -->
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<username>${scm.username}</username>
+					<password>${scm.password}</password>
+					<connectionUrl>${scm.developerConnection}</connectionUrl>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
