@@ -191,7 +191,7 @@ Aliqua, ullamco saepe ea magna magna ut et incididunt ut. Consectetur tunante no
 					</execution>
 				</executions>
 			</plugin>
-			<!--  -->
+			<!-- Release -->
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.3</version>
@@ -201,7 +201,12 @@ Aliqua, ullamco saepe ea magna magna ut et incididunt ut. Consectetur tunante no
 					<connectionUrl>${scm.developerConnection}</connectionUrl>
 				</configuration>
 			</plugin>
-
+			<!-- Sonar -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
 		</plugins>
 	</build>
 
