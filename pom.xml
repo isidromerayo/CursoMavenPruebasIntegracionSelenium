@@ -73,7 +73,7 @@ Aliqua, ullamco saepe ea magna magna ut et incididunt ut. Consectetur tunante no
 		<dependency>
 			<artifactId>junit</artifactId>
 			<groupId>junit</groupId>
-			<version>4.12</version>
+			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
